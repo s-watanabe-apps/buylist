@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Buy-List</string>
+
+    <string name="settings">Setting</string>
+    <string name="mode">Mode</string>
+    <string name="mode_default">Device default</string>
+    <string name="mode_light">Light mode</string>
+    <string name="mode_dark">Dark mode</string>
+    <string name="list_add_pos">List addition location</string>
+    <string name="item_add_pos">Product Addition Location</string>
+    <string name="add_first">Add to the beginning</string>
+    <string name="add_end">Add to the end</string>
+
+    <string name="list_edit">Edit Shopping List</string>
+    <string name="list_input">Create a shopping list</string>
+    <string name="list_delete">Delete shopping list</string>
+    <string name="list_name_hint">[List name]</string>
+    <string name="list_delete_message">Remove the following from your shopping list.</string>
+    <string name="fatal_error_message">An error occurred. Please start over.</string>
+
+    <string name="total">Total</string>
+    <string name="item_edit">Edit product information</string>
+    <string name="item_input">Enter product information</string>
+    <string name="item_delete">Delete product information</string>
+    <string name="item_name_hint">[Product name]</string>
+    <string name="item_value_hint">[Amount]</string>
+    <string name="item_memo_hint">[Free Memo]</string>
+    <string name="item_delete_message">The following product information will be deleted.</string>
+    <string name="value_exception_message">A non-numeric value was entered in the amount field.</string>
+
+    <string name="sample_list">Sample List</string>
+    <string name="sample_item">Sample product</string>
+    <string name="sample_memo">Sample memo</string>
+
+    <string name="button_negative">Cancel</string>
+    <string name="delete_confirm">This action cannot be undone. Are you sure you want to proceed?</string>
+
+</resources>

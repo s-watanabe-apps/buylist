@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+    <LinearLayout
+        android:layout_marginTop="45dp"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="8sp"
+            android:text="@string/mode" />
+        <RadioGroup
+            android:id="@+id/settings_radio_group_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/settings_radio_mode_default"
+                android:text="@string/mode_default"
+                android:textSize="18sp"
+                android:layout_marginStart="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/settings_radio_mode_light"
+                android:text="@string/mode_light"
+                android:textSize="18sp"
+                android:layout_marginStart="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/settings_radio_mode_dark"
+                android:text="@string/mode_dark"
+                android:textSize="18sp"
+                android:layout_marginStart="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="8sp"
+            android:text="@string/list_add_pos" />
+        <RadioGroup
+            android:id="@+id/settings_radio_group_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/settings_radio_list_first"
+                android:text="@string/add_first"
+                android:textSize="18sp"
+                android:layout_marginStart="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/settings_radio_list_end"
+                android:text="@string/add_end"
+                android:textSize="18sp"
+                android:layout_marginStart="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="8sp"
+            android:text="@string/item_add_pos" />
+        <RadioGroup
+            android:id="@+id/settings_radio_group_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/settings_radio_item_first"
+                android:text="@string/add_first"
+                android:textSize="18sp"
+                android:layout_marginStart="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/settings_radio_item_end"
+                android:text="@string/add_end"
+                android:textSize="18sp"
+                android:layout_marginStart="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

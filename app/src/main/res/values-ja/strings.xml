@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">お買い物リスト</string>
+
+    <string name="settings">設定</string>
+    <string name="mode">モード</string>
+    <string name="mode_default">端末のデフォルト</string>
+    <string name="mode_light">ライトモード</string>
+    <string name="mode_dark">ダークモード</string>
+    <string name="list_add_pos">リストの追加位置</string>
+    <string name="item_add_pos">商品の追加位置</string>
+    <string name="add_first">先頭に追加する</string>
+    <string name="add_end">最後に追加する</string>
+
+    <string name="list_edit">お買い物リストを編集</string>
+    <string name="list_input">お買い物リストを作成</string>
+    <string name="list_delete">お買い物リストを削除</string>
+    <string name="list_name_hint">[リスト名]</string>
+    <string name="list_delete_message">以下のお買い物リストを削除します。</string>
+    <string name="fatal_error_message">問題が発生しました。初めからやり直して下さい。</string>
+
+    <string name="total">合計</string>
+    <string name="item_edit">商品情報を編集</string>
+    <string name="item_input">商品情報を入力</string>
+    <string name="item_delete">商品情報を削除</string>
+    <string name="item_name_hint">[商品名]</string>
+    <string name="item_value_hint">[金額]</string>
+    <string name="item_memo_hint">[フリーメモ]</string>
+    <string name="item_delete_message">以下の商品情報を削除します。</string>
+    <string name="value_exception_message">金額に数値以外が入力されました。</string>
+
+    <string name="sample_list">サンプルリスト</string>
+    <string name="sample_item">サンプル商品</string>
+    <string name="sample_memo">サンプルメモ</string>
+
+    <string name="button_negative">キャンセル</string>
+    <string name="delete_confirm">この操作は元に戻せません。よろしいですか？</string>
+
+</resources>
