@@ -1,9 +1,14 @@
 package com.swapps.buylist;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.InputType;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -334,7 +339,66 @@ public class SubActivity extends AppCompatActivity implements
             setResult(RESULT_OK);
             finish();
             return true;
+        } else if (item.getItemId() == R.id.action_copy) {
+            copyToClipboard("list", getListStr());
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.sub_menu, menu);
+        return true;
+    }
+
+    private String getListStr() {
+        StringBuilder value = new StringBuilder();
+        ParentItem item = list.get(index);
+
+        Locale locale = Locale.getDefault();
+        NumberFormat nf;
+        if (Locale.JAPAN.equals(locale) || Locale.JAPANESE.equals(locale)) {
+            nf = NumberFormat.getCurrencyInstance(Locale.JAPAN);
+        } else {
+            nf = NumberFormat.getCurrencyInstance(locale);
+        }
+
+        value.append(item.getName()).append("\n");
+        value.append("----------------------------------------\n");
+        String allSumStr = getString(R.string.total) + " ";
+        allSumStr += nf.format(list.get(index).getItems()
+                .stream()
+                .mapToInt(ChildItem::getValue)
+                .sum());
+
+        String checkSumStr = "[*] ";
+        checkSumStr += nf.format(list.get(index).getItems()
+                .stream()
+                .filter(ChildItem::getCheck)
+                .mapToInt(ChildItem::getValue)
+                .sum());
+        value.append(allSumStr + "\n" + checkSumStr + "\n");
+        value.append("----------------------------------------\n");
+
+        for (int i = 0; i < item.getItems().size(); i++) {
+            ChildItem sub = item.getItems().get(i);
+            value.append("- " + sub.getName() + "\n");
+            if (sub.getCheck()) {
+                value.append("[*] ");
+            } else {
+                value.append("[ ] ");
+            }
+            value.append(nf.format(sub.getValue()) + "\n");
+        }
+
+        return value.toString();
+    }
+
+    private void copyToClipboard(String label, String text) {
+        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText(label, text);
+        clipboard.setPrimaryClip(clip);
     }
 }
